@@ -11,9 +11,6 @@ public class DesafioBancoInterApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DesafioBancoInterApplication.class, args);
-
-		UniqueDigit uniqueDigit = new UniqueDigit(BigInteger.valueOf(9875), 4);
-		System.out.println(uniqueDigit.getResult());
 	}
 
 }

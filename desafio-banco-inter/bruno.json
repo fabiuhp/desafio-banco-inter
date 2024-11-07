@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "desafio-banco-inter",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
