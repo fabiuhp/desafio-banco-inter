@@ -1,12 +1,27 @@
 package br.com.fabiopereira.desafio_banco_inter.domain;
 
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.math.BigInteger;
+import java.util.UUID;
 
 @Getter
+@Entity
+@Table(name = "unique_digits")
+@AllArgsConstructor
+@NoArgsConstructor
 public class UniqueDigit {
+    @Id
+    private UUID id;
+
     private int result;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     public UniqueDigit(BigInteger number, Integer k) {
         result = calculateNewUniqueDigit(number, k);
